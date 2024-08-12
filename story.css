@@ -1,0 +1,188 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color:#f4f4f4;
+    color: black;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s ease, width 0.3s ease;
+    position: fixed; /* Fix sidebar to the left */
+    height: 100%;
+}
+
+.sidebar.hidden {
+    width: 60px;
+    padding: 15px 5px; /* Adjust padding to fit smaller width */
+}
+
+.sidebar img {
+    width: 200px;
+    height: 200px;
+    transition: width 0.3s, height 0.3s;
+}
+
+.sidebar.hidden img {
+    padding-top: 10%;
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center; /* Center align text in smaller width */
+    
+}
+.sidebar ul li:hover{
+    background-color: rgba(21,84,119);
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.sidebar .contact {
+    margin-top: 40px; /* Adjusted margin for extra space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align text in smaller width */
+    transition: opacity 0.3s;
+}
+
+.sidebar.hidden .contact {
+    opacity: 0; /* Hide contact details when collapsed */
+}
+.sidebar.hidden .menu {
+    opacity: 0; /* Hide contact details when collapsed */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #dbd9d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: margin-left 0.3s ease;
+    margin-left: 250px;
+    width: calc(100% - 250px); /* Adjust width to account for sidebar */
+}
+
+.main-content.expanded {
+    margin-left: 60px;
+    width: calc(100% - 60px); /* Adjust width to account for collapsed sidebar */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(21,84,119);/* Set background to black */
+    color: white; /* Set text color to white */
+    padding: 10px;
+}
+
+#animated-text {
+    font-size: 1.5em;
+    color: #f4f4f4;
+    animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.events {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: auto; /* Pushes footer to the bottom */
+}
+
+/*.event-card {
+    width: 45%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    text-align: center;
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+}*/
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+    transition: width 0.3s;
+}
+
+.sidebar.collapsed ul li a {
+    display: none;
+}
+
+.event-card {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+.words{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+}
+.event-card:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.event-card img {
+    width: auto;
+    height: auto;
+    max-width: 150px; /* Set a maximum width */
+    margin-right: 20px; /* Space between the image and the text */
+}
+
+.event-details {
+    flex: 1; /* Allow the text container to grow and fill the remaining space */
+}
+
+.event-details h3 {
+    margin: 0; /* Remove default margin */
+    padding: 0;
+}
+
+.event-details p {
+    margin: 10px 0 0 0; /* Add margin to the top of the paragraph */
+    padding: 0;
+}
+
