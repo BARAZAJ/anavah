@@ -3,20 +3,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    
 }
 
 .sidebar {
     width: 250px;
-    background-color:#f4f4f4;
+    background-color: #f4f4f4;
     color: black;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     transition: transform 0.3s ease, width 0.3s ease;
     position: fixed; /* Fix sidebar to the left */
     height: 100%;
+    align-items: center;
 }
 
 .sidebar.hidden {
@@ -24,14 +24,15 @@ body {
     padding: 15px 5px; /* Adjust padding to fit smaller width */
 }
 
-.sidebar img {
-    width: 200px;
-    height: 200px;
+.logo {
+    width: 150px;
+    height: 150px;
     transition: width 0.3s, height 0.3s;
+    top: 0px;
+    padding: 8px;
 }
 
-.sidebar.hidden img {
-    padding-top: 10%;
+.sidebar.hidden .logo {
     width: 50px;
     height: 50px;
 }
@@ -45,17 +46,25 @@ body {
     margin: 10px 0;
     display: flex;
     justify-content: center; /* Center align text in smaller width */
-    
 }
-.sidebar ul li:hover{
-    background-color: rgba(21,84,119);
+
+.sidebar ul li a:hover {
+    color: rgba(21,84,119,1);
+    text-emphasis-color: rgba(21,84,119,1);
+    transform: scale(1.3);
+    
+
+    
 }
 
 .sidebar ul li a {
     color: black;
     text-decoration: none;
     white-space: nowrap; /* Prevent text from wrapping */
+    padding-left: 30px;
+    padding-right: 30px;
 }
+
 
 .sidebar .contact {
     margin-top: 40px; /* Adjusted margin for extra space */
@@ -63,25 +72,30 @@ body {
     flex-direction: column;
     align-items: center; /* Center align text in smaller width */
     transition: opacity 0.3s;
+    font-size: 12px;
 }
 
 .sidebar.hidden .contact {
     opacity: 0; /* Hide contact details when collapsed */
 }
 .sidebar.hidden .menu {
-    opacity: 0; /* Hide contact details when collapsed */
+    opacity: 0; /* Hide menu details when collapsed */
+}
+.sidebar.hidden .facebook {
+    opacity: 0;
 }
 
 .main-content {
     flex: 1;
     padding: 20px;
-    background-color: #dbd9d9;
+    background-color: #eceaea;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: margin-left 0.3s ease;
     margin-left: 250px;
     width: calc(100% - 250px); /* Adjust width to account for sidebar */
+    
 }
 
 .main-content.expanded {
@@ -92,9 +106,12 @@ body {
 header {
     text-align: center;
     margin-bottom: 20px;
-    background-color: rgba(21,84,119);/* Set background to black */
-    color: white; /* Set text color to white */
+    background-color: rgba(21,84,119,1); /* Set background to black */
+    color: #faeb95; /* Set text color to white */
     padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 #animated-text {
@@ -102,87 +119,283 @@ header {
     color: #f4f4f4;
     animation: fadeInOut 4s infinite;
 }
-
+.facebook img{
+    width: 50px;
+    height: 50px;
+}
 @keyframes fadeInOut {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
 }
 
 .events {
-    display: flex;
+   /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding-bottom: 6%;
+    align-content: center;
+    margin-top: 8%;
+
     margin-bottom: auto; /* Pushes footer to the bottom */
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+   
+    
+  
 }
 
-/*.event-card {
-    width: 45%;
+.event-card {
+    width: 80%;
     background-color: white;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     cursor: pointer;
     text-align: center;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+
+   
+   /* display: flex;
+    flex-direction: column;
+    margin-left: 10%;*/
+    padding: 10%;
+    
+    
+}
+
+.event-card:hover {
+    transform: scale(1.05); /* Grow on hover */
+}
+
+.event-image{
+    width: 30%;
+    height: 30%;
 }
 
 .event-card img {
-    width: 100%;
+    max-width: 30%;
     height: auto;
-}*/
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    padding: 10%;
+    float: left;
+    margin-right: 10px;
+    max-width: 100%;
+    
+   
+    
+}
+.words{
+    width: 100%;
+    margin-top: 0;
+    margin-left: 120px;
+}
+
+.event-card img:hover {
+    transform: scale(1.05); /* Grow on hover */
+}
 
 footer {
     text-align: center;
     margin-top: 20px;
     padding-bottom: 10px;
 }
-
-.sidebar.collapsed {
-    width: 60px;
-    transition: width 0.3s;
+.menu-button{
+        display: inline-block;
+        padding: 5px 15px;
+        background: linear-gradient(to right, rgba(21,84,119,1), rgba(21,84,119,1) 10%, #aaa 10%, #aaa 90%, rgba(21,84,119,1) 90%);
+        border-radius: 40px;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        font-family: Arial, sans-serif;
+        text-shadow: 2px 2px 4px #000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+    
+}
+.menu-button:hover{
+    transform: scale(1.05);
+}
+.menu{
+    display: inline-block;
+    padding: 10px 50px;
+    background: linear-gradient(to right, rgba(21,84,119,1), rgba(21,84,119,1) 10%, #aaa 10%, #aaa 90%, rgba(21,84,119,1) 90%);
+    border-radius: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
 }
 
-.sidebar.collapsed ul li a {
+.menu:hover {
+    transform: scale(1.05);
+}
+.mobile-sidebar{
     display: none;
 }
 
-.event-card {
+    /* Existing styles above */
+
+/* Mobile styles */
+
+   /* Existing styles above */
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    body {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+        padding-top: 140px; /* Adjust top padding to prevent content overlap */
+    }
+
+    header {
+        background-color: rgba(21,84,119,1);
+        color: #faeb95;
+        padding: 0px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        font-size: 50%;
+        
+    }
+
+   
+    
+    .mobile-sidebar {
+        display: flex;
+        flex-direction: row;
+        z-index: 10000;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .mobile-sidebar .mobile-menu {
+        
     display: flex;
-    align-items: center; /* Align items vertically in the center */
-    border: 1px solid #ccc;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Add transition for hover effect */
-}
-.words{
-    display: flex;
-    flex-direction: column;
-}
-.title{
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    left: 50%;
-}
-.event-card:hover {
-    background-color: #f0f0f0; /* Change background color on hover */
+    flex-direction: row;
+    padding: 10px 50px;
+    background: linear-gradient(to right, rgba(21,84,119,1), rgba(21,84,119,1) 10%, #aaa 10%, #aaa 90%, rgba(21,84,119,1) 90%);
+    border-radius: 40px;
+    text-align: center;
+    color: black;
+    font-size: 100%;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    width: 80%;
+    position: fixed;
+    top: 7%;
+    justify-content: space-evenly;
+    
+    
+
+    }
+    .mobile-menu:hover {
+        transform: scale(1.05);
+    }
+    
+    .mobile-sidebar  ul {
+        list-style: none;
+        padding: 0;
+        
+    }
+    
+    .mobile-sidebar ul li a  {
+        text-decoration: none;
+        margin: 10px 0;
+        display: flex;
+        color: #000;
+    
+        justify-content: center; /* Center align text in smaller width */
+    }
+    
+    .mobile-sidebar ul li a:hover {
+        color: rgba(21,84,119,1);
+        text-emphasis-color: rgba(21,84,119,1);
+        transform: scale(1.3);
+          
+    }
+    
+    .mobile-sidebar  {
+        color: black;
+        text-decoration: none;
+        white-space: nowrap; /* Prevent text from wrapping */
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .events {
+      /*  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: 80%;
+        align-items: center;
+        justify-content: center;
+        padding-top: 80%;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .event-card {
+        width: 100%;
+        margin-bottom: 20px;
+    
+       
+    }
+
+    .event-card img {
+        width: 30%;
+    
+        height: auto;
+    }
+
+    .facebook, .contact {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(21,84,119,1);
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .facebook img, .contact img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        padding-top: 20px;
+        bottom: 0%;
+        margin-bottom: 0%;
+    }
 }
 
-.event-card img {
-    width: auto;
-    height: auto;
-    max-width: 150px; /* Set a maximum width */
-    margin-right: 20px; /* Space between the image and the text */
-}
 
-.event-details {
-    flex: 1; /* Allow the text container to grow and fill the remaining space */
-}
-
-.event-details h3 {
-    margin: 0; /* Remove default margin */
-    padding: 0;
-}
-
-.event-details p {
-    margin: 10px 0 0 0; /* Add margin to the top of the paragraph */
-    padding: 0;
-}
-
+  

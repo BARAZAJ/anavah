@@ -9,38 +9,56 @@
 </head>
 <body>
     <div class="sidebar">
-        <button id="toggle-button" onclick="toggleSidebar()">Hide menu</button>
-        <img src="picturesA/new_logo.png" alt="anavah logo" width="200px" height="200px">
+        
+       <img src="pictures/anavah_logo.jpg" alt="anavah logo" class="logo">
+        <button id="toggle-button" onclick="toggleSidebar()"  class="menu-button">Hide menu</button>
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">events</a></li>
-            <li><a href="#">Our story</a></li>
-            <li><a href="#">Meet the team</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="story.html">Our story</a></li>
+            <li><a href="#">The team</a></li>
         </ul>
         <div class="contact">
-            <p><strong>Phone:</strong> 0779875011</p>
-            <p><strong>Email:</strong> anavah@gmail.com</p>
+            <p><strong>Phone:</strong> +256760750759</p>
             <p><strong>WhatsApp:</strong> anavah foundation</p>
+            <p><strong>Email:</strong> anavahfoundation1@gmail.com</p>
         </div>
+        <section class="facebook">
+            <p>Follow us on:</p>
+            <a href="https://www.facebook.com/"><img src="pictures/facebook-color-svgrepo-com.svg" class="social-icon"></a>
+            <a href="https://www.instagram.com/"><img src="pictures/instagram-1-svgrepo-com.svg" class="social-icon"></a>
+            <a href="https://x.com/"><img src="pictures/twitter-color-svgrepo-com.svg" class="social-icon"></a>
+            <a href="https://www.facebook.com/"><img src="pictures/whatsapp-svgrepo-com.svg" class="social-icon"></a>
+        </section>
     </div>
+    
+    
     <div class="main-content">
         <header>
             <h1>ANAVAH FOUNDATION</h1>
-            <h2 id="animated-text">Our story......</h2>
+            <h2 id="animated-text">Care, Compassion and Opportunity for all......</h2>
         </header>
-
+        <div class="mobile-sidebar">
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="story.html">Our story</a></li>
+                <li><a href="#">The team</a></li>
+            </ul>
+        </div>
         <section class="events">
-            
             <div class="event-card" onclick="window.location='#';">
-                <img src="picturesA/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" alt="Health project in Jinja" class="event-image">
-                <div class="words">
-                <h3> Amoit Lydia Osikol - Executive director</h3>
+                <img src="pictures/Lydia.jpg" alt="Anavah CEO picture " class="event-image">
+                <div>
+                <h3> Amoit Lydia Osikol - Executive director</h3>    
+            </div>
+            <div clss="words">
                 <p>Growing up, I was deeply moved by the struggles and injustices faced by marginalized communities. I saw how lack of access to education, healthcare, and economic opportunities trapped individuals in cycles of poverty and despair. I knew I had to do something to make a difference.</p>
 
                 <p> My passion for this cause was ignited during my volunteer work at a local community centre, where I witnessed first-hand the impact of dedicated support and resources on people's lives. I saw children blossom into confident learners, women gain economic independence, and elderly individuals find dignity and purpose.</p>
                 <p> Anavah Foundation is born out of this passion and commitment. Our mission is to provide education, healthcare, and economic empowerment to those who need it most. We aim to create a supportive community that fosters growth, hope, and resilience
                 </p>
-                </div>
+            </div>
         </section>
         <footer>
             <p>&copy; <span id="current-year"></span> anavah foundation</p>
