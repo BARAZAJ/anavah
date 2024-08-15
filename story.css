@@ -25,17 +25,18 @@ body {
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     transition: width 0.3s, height 0.3s;
     top: 0px;
-    padding: 8px;
+    padding-bottom: 5px;
 }
 
 .sidebar.hidden .logo {
     width: 50px;
     height: 50px;
 }
+
 
 .sidebar ul {
     list-style: none;
@@ -87,7 +88,7 @@ body {
 
 .main-content {
     flex: 1;
-    padding: 20px;
+    padding: 5PX;
     background-color: #eceaea;
     display: flex;
     flex-direction: column;
@@ -108,10 +109,18 @@ header {
     margin-bottom: 20px;
     background-color: rgba(21,84,119,1); /* Set background to black */
     color: #faeb95; /* Set text color to white */
-    padding: 10px;
+   /* padding: 10px;*/
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+header h1{
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+header h2{
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
 }
 
 #animated-text {
@@ -156,7 +165,6 @@ header {
     padding: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     cursor: pointer;
-    text-align: center;
     transition: transform 0.3s ease; /* Smooth hover effect */
 
    
@@ -181,7 +189,7 @@ header {
     max-width: 30%;
     height: auto;
     transition: transform 0.3s ease; /* Smooth hover effect */
-    padding: 10%;
+    padding: 1%;
     float: left;
     margin-right: 10px;
     max-width: 100%;
@@ -355,22 +363,31 @@ footer {
         padding-top: 80%;*/
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: center;
         justify-content: center;
         
     }
 
     .event-card {
-        width: 100%;
+        padding-top: 5px;
         margin-bottom: 20px;
+        margin-top: 20px;
+
     
        
+    }
+    .event-card p{
+        display: inline;
+        text-align: left;
     }
 
     .event-card img {
         width: 30%;
     
         height: auto;
+    }
+    h3{
+        font-size: 15px;
     }
 
     .facebook, .contact {
@@ -384,14 +401,13 @@ footer {
         padding: 10px 0;
         z-index: 1000;
     }
-     .events .words p{
-        text-align: left;
-        
-    }
-
+   
     .facebook img, .contact img {
         width: 40px;
         height: 40px;
+    }
+    P{
+        padding: 5px;
     }
 
     footer {
