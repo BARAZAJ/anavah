@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     
+    
 }
 
 .sidebar {
@@ -93,14 +94,14 @@ body {
 .social-icon{
     width: 10px;
 }
-
 .main-content {
     flex: 1;
     padding: 5PX;
     background-color: #eceaea;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+   
     transition: margin-left 0.3s ease;
     margin-left: 250px;
     width: calc(100% - 250px); /* Adjust width to account for sidebar */
@@ -159,30 +160,31 @@ header h2{
 
     margin-bottom: auto; /* Pushes footer to the bottom */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 80%;
     margin-left: 10%;
+    align-items: center;
+    justify-content: center;
    
     
   
 }
-
-.event-card {
-    width: 80%;
-    background-color: white;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Smooth hover effect */
-
-   
+.event-card1{
     display: flex;
     flex-direction: column;
-    
-    
-    
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding-bottom: 0%;
+    padding-top: 0% ;
 }
-.event-card1 {
+
+.event-card {
     width: 80%;
     background-color: white;
     padding: 10px;
@@ -191,14 +193,18 @@ header h2{
     transition: transform 0.3s ease; /* Smooth hover effect */
 
    
-    display: flex;
+   /* display: flex;
     flex-direction: column;
-    margin-left: 10%;
+    margin-left: 10%;*/
     padding: 10%;
     align-items: center;
     justify-content: center;
     
     
+}
+.event-card1 p{
+    padding: 0%;
+
 }
 
 .event-card:hover {
@@ -210,18 +216,23 @@ header h2{
     height: 30%;
 }
 
-.event-card img {
+.ceo-pic{
+    width: 50%;
+    
+
+}
+
+/*.event-card img {
     max-width: 30%;
     height: auto;
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease; 
     padding: 1%;
     float: left;
     margin-right: 10px;
     max-width: 100%;
-    
-   
-    
+  
 }
+*/
 .words{
     width: 100%;
     margin-top: 0;
@@ -275,6 +286,7 @@ footer {
     display: none;
 }
 
+
     /* Existing styles above */
 
 /* Mobile styles */
@@ -284,9 +296,11 @@ footer {
 /* Mobile styles */
 @media only screen and (max-width: 768px) {
     body {
-        display: block;
+      /*  display: block;
         margin: 0;
-        padding: 0;
+        padding: 0;*/
+        display: flex;
+        flex-direction: column;
     }
 
     .sidebar {
@@ -379,24 +393,25 @@ footer {
     }
     
     .events {
-      /*  display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        max-width: 80%;
-        align-items: center;
-        justify-content: center;
-        padding-top: 80%;*/
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-top: 10%;
+       
         
     }
 
+ 
     .event-card {
         padding-top: 5px;
         margin-bottom: 20px;
         margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
 
     
        
@@ -432,8 +447,8 @@ footer {
         height: 40px;
     }
     P{
-        padding: 3px;
-        font-size: 70%;
+        padding: 0%;
+        font-size: 100%;
     }
 
     footer {
