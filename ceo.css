@@ -93,6 +93,7 @@ body {
 .social-icon{
     width: 10px;
 }
+
 .main-content {
     flex: 1;
     padding: 5PX;
@@ -166,8 +167,22 @@ header h2{
   
 }
 
-
 .event-card {
+    width: 80%;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+
+   
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+.event-card1 {
     width: 80%;
     background-color: white;
     padding: 10px;
@@ -176,10 +191,12 @@ header h2{
     transition: transform 0.3s ease; /* Smooth hover effect */
 
    
-   /* display: flex;
+    display: flex;
     flex-direction: column;
-    margin-left: 10%;*/
+    margin-left: 10%;
     padding: 10%;
+    align-items: center;
+    justify-content: center;
     
     
 }
@@ -376,22 +393,10 @@ footer {
         
     }
 
-   /* .event-card1 {
-        padding-top: 5px;
-        margin-bottom: 20px;
-        margin-top: 20px;
-
-    
-       
-    }*/
     .event-card {
         padding-top: 5px;
         margin-bottom: 20px;
         margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
     
        
@@ -427,7 +432,7 @@ footer {
         height: 40px;
     }
     P{
-        padding: 10px;
+        padding: 3px;
         font-size: 70%;
     }
 

@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     
+    
 }
 
 .sidebar {
@@ -99,7 +100,7 @@ body {
     background-color: #eceaea;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     transition: margin-left 0.3s ease;
     margin-left: 250px;
     width: calc(100% - 250px); /* Adjust width to account for sidebar */
@@ -149,7 +150,7 @@ header h2{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
@@ -158,6 +159,7 @@ header h2{
     margin-top: 8%;
 
     margin-bottom: auto; /* Pushes footer to the bottom */
+    gap: 10%;
   
 }
 
@@ -172,6 +174,10 @@ header h2{
     display: flex;
     flex-direction: column;
     margin-left: 10%;
+  align-items: center;
+  justify-content: center;
+  
+
     
     
 }
@@ -182,7 +188,8 @@ header h2{
 
 .event-card img {
     width: 100%;
-    height: auto;
+
+    height: 200px;
     transition: transform 0.3s ease; /* Smooth hover effect */
     
 }
@@ -349,6 +356,9 @@ footer {
         flex-direction: column;
         align-items: center;
         padding: 0 5%;*/
+        gap: 0%;
+    
+        
     }
 
     .event-card {
