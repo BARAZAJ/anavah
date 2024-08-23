@@ -174,16 +174,27 @@ header h2{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: transform 0.3s ease; /* Smooth hover effect */
-
-   
-   /* display: flex;
-    flex-direction: column;
-    margin-left: 10%;*/
     padding: 10%;
     
     
 }
+.events .event-card a{
+    
+    text-decoration: none;
+    margin: 10px 0;
+    display: flex;
+    color: #000;
+    
 
+    justify-content: center;
+       
+}
+.events .event-card a:hover{
+    color: rgba(21,84,119,1);
+    text-emphasis-color: rgba(21,84,119,1);
+    transform: scale(1.3);
+
+}
 .event-card:hover {
     transform: scale(1.05); /* Grow on hover */
 }
@@ -399,10 +410,24 @@ footer {
         text-align: left;
     }
 
+
     .event-card img {
         width: 30%;
     
         height: auto;
+    }
+     .events .event-card a{
+        color: rgba(21,84,119,1);
+        text-emphasis-color: rgba(21,84,119,1);
+        transform: scale(1.3);
+        text-decoration: none;
+        margin: 10px 0;
+        display: flex;
+        color: #000;
+        
+    
+        justify-content: center;
+           
     }
     h3{
         font-size: 15px;
