@@ -68,7 +68,7 @@ body {
 
 
 .sidebar .contact {
-    margin-top: 40px; /* Adjusted margin for extra space */
+    margin-top: 10px; /* Adjusted margin for extra space */
     display: flex;
     flex-direction: column;
     align-items: center; /* Center align text in smaller width */
@@ -82,10 +82,17 @@ body {
 .sidebar.hidden .menu {
     opacity: 0; /* Hide menu details when collapsed */
 }
-.sidebar.hidden .facebook {
-    opacity: 0;
+.sidebar.hidden .facebook p{
+    display: none;
 }
-
+.sidebar.hidden .facebook {
+    display:flex;
+    flex-direction: column;
+    margin-top: 20%;
+}
+.social-icon{
+    width: 10px;
+}
 .main-content {
     flex: 1;
     padding: 5PX;
@@ -114,7 +121,6 @@ header {
     top: 0;
     z-index: 1000;
 }
-
 header h1{
   margin-top: 1.5%;
   margin-bottom: 1.5%;
@@ -130,8 +136,8 @@ header h2{
     animation: fadeInOut 4s infinite;
 }
 .facebook img{
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
 }
 @keyframes fadeInOut {
     0%, 100% { opacity: 0; }
@@ -139,21 +145,27 @@ header h2{
 }
 
 .events {
-   
+  
     display: flex;
     flex-direction: row;
     width: 80%;
     margin-left: 10%;
-
    
     
   
 }
 
-.events img{
-    width:100%;
+.events img {
+    width: 100%;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    padding: 1%;
+    float: left;
+    margin-right: 10px;
+    max-width: 100%;
+    
+   
+    
 }
-
 .words{
     width: 100%;
     margin-top: 0;
@@ -205,12 +217,20 @@ footer {
     display: none;
 }
 
+    /* Existing styles above */
 
+/* Mobile styles */
+
+   /* Existing styles above */
+
+/* Mobile styles */
 @media only screen and (max-width: 768px) {
     body {
-        display: block;
+      /*  display: block;
         margin: 0;
-        padding: 0;
+        padding: 0;*/
+        display: flex;
+        flex-direction: column;
     }
 
     .sidebar {
@@ -303,16 +323,40 @@ footer {
     }
     
     .events {
-     
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-top: 10%;
+       
         
-    } 
+    }
+
+ 
+
 
     
-   
+
+    .event-card img {
+        width: 30%;
+        height: auto;
+    }
+     .events .event-card a{
+        color: rgba(21,84,119,1);
+        text-emphasis-color: rgba(21,84,119,1);
+        transform: scale(1.3);
+        text-decoration: none;
+        margin: 10px 0;
+        display: flex;
+        color: #000;
+        
+    
+        justify-content: center;
+           
+    }
+    h3{
+        font-size: 15px;
+    }
 
     .facebook, .contact {
         display: flex;
@@ -331,7 +375,8 @@ footer {
         height: 40px;
     }
     P{
-        padding: 5px;
+        padding: 10px;
+        font-size: 100%;
     }
 
     footer {
@@ -340,6 +385,7 @@ footer {
         margin-bottom: 0%;
     }
 }
+
 
 
   
