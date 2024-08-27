@@ -20,3 +20,34 @@ function toggleSidebar() {
         button.textContent = 'Menu';
     }
 }
+
+
+// slide show stuff
+let slideIndex = 0;
+let slideInterval;
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }  
+    slides[slideIndex - 1].style.display = "block";  
+}
+
+function plusSlides(n) {
+    clearInterval(slideInterval); // Stop the automatic slideshow
+    slideIndex += n;
+    let slides = document.getElementsByClassName("slide");
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    if (slideIndex < 1) { slideIndex = slides.length; }
+    showSlides();
+    slideInterval = setInterval(showSlides, 3000); // Restart automatic slideshow
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    showSlides();
+    slideInterval = setInterval(showSlides, 3000); // Automatic slideshow
+});
+
