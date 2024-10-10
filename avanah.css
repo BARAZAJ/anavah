@@ -6,7 +6,14 @@ body {
     
     
 }
-
+.logo1{
+    display: none;
+    width: 100px;
+    height: 100px;
+    transition: width 0.3s, height 0.3s;
+    top: 0px;
+    padding-bottom: 5px;
+}
 .sidebar {
     width: 250px;
     background-color: #f4f4f4;
@@ -317,7 +324,7 @@ footer {
     .prev:hover, .next:hover {
         background-color: rgba(0, 0, 0, 0.8);
     }
-    
+   
 
 
 @media only screen and (max-width: 768px) {
@@ -326,6 +333,7 @@ footer {
         margin: 0;
         padding: 0;
     }
+    
 
     .sidebar {
         display: none; /* Hide sidebar on mobile */
@@ -478,6 +486,16 @@ footer {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px;
     }
+    .logo1{
+        display: block;
+        position:fixed;
+        left: 0%;
+        top:0%;
+        z-index: 10000;
+        width: 50px;
+        height: 50px;
+    }
+
 }
 
 
