@@ -3,104 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anavah Foundation</title>
+    <title>Project plan for my website project</title>
     <meta name="description" content="The official website for anavah foundation showing details about the organization and its founders.">
     <meta name="author"  content="Baraza John">
-    <link rel="icon" href="pictures/anavahfavicon.ico">
-    <link rel="stylesheet" href="avanah.css">
-    <script src="anavah.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/project.js" defer></script>
 </head>
-<body> 
-    <img src="pictures/anavah_logo.jpg" alt="anavah logo" class="logo1">
-    <div class="sidebar">
-       <img src="pictures/anavah_logo.jpg" alt="anavah logo" class="logo">
-        <button id="toggle-button" onclick="toggleSidebar()"  class="menu-button">Hide menu</button>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="story.html">Our story</a></li>
-            <li><a href="team.html">The team</a></li>
-        </ul>
-        <div class="contact">
-            <p><strong>Phone:</strong> +256760750759</p> 
-            <p><strong>Facebook:</strong> anavah foundation</p>
-            <p><strong>Email:</strong> anavahfoundation1@gmail.com</p>
+<body>
+    <header>
+        
+        <div class="logo">
+            <img src="images/anavah_logo.jpg" alt="anavah logo">
+            <h1>Anavah Foundation</h1>
         </div>
-        <section class="facebook">
-            <p>Follow us on:</p>
-            <a href="https://www.facebook.com/profile.php?id=61565399113022"><img src="pictures/facebook-color-svgrepo-com.svg" width=20px></a>
-            <a href="https://www.instagram.com/anavah2024/"><img src="pictures/instagram-1-svgrepo-com.svg" width=20px></a>
-            <a href="https://x.com/"><img src="pictures/twitter-color-svgrepo-com.svg" width=20px></a>
-            <a href="https://www.facebook.com/"><img src="pictures/whatsapp-svgrepo-com.svg" width="20px"></a>
-        </section>
-    </div>
-    
-    
-    <div class="main-content">
-      
-        <header>
-
-            <h1>ANAVAH FOUNDATION</h1>
-            <h2 id="animated-text">Care, Compassion and Opportunity for all......</h2>
-        </header>
-        <div class="mobile-sidebar">
-
-            <ul class="mobile-menu">
-                <li><a href="index.html">Home</a></li>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#intro">Home</a></li>
                 <li><a href="#">Events</a></li>
-                <li><a href="story.html">Our story</a></li>
-                <li><a href="team.html">The team</a></li>
+                <li><a href="#story">Our story</a></li>
+                <li><a href="#team">The team</a></li>
             </ul>
+        </nav>
+
+        <div class="hamburger">
+            <img src="images/icons8-hamburger-menu.svg" alt="hamburger menu"  >
         </div>
-        <section id="slideshow">
-            <div class="slides">
-                <div class="slide fade">
-                    <img src="pictures/educatio2.jpg" alt="Image 1" width="50%" height="20%">
-                    <div class="text">Providing access to quality education  and skills training</div>
+
+    </header>
+    <nav class="mobile-nav">
+        <div class="close-icon"><img src="images/icons8-x-48.png" alt="icon image"> </div>
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#story">Our story</a></li>
+            <li><a href="#team">The team</a></li>
+        </ul>
+        
+    </nav>
+    <main>
+        
+        <div id="intro" class="intro">
+            <img src="images/anava1.jpg" alt="people standing" class="main-pic">  
+            <div class="motto">
+                <h1> Our vision</h1>
+                <p>We believe that every individual deserves a chance to thrive, regardless of their age, gender, or background.
+                    Join us on this journey to inspire positive change and create a brighter future for all.</p>
+
+                <div class="api-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Weather</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Temperature</td>
+                                <td><span id="current-temp"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Humidity</td>
+                                <td><span id="humidity"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Description</td>
+                                <td><span id="set"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" > <p>Click to donate and make a difference!</p></a>
+                    <a href="#" > <p>Click to learn of our upcoming events</p></a>
+                    
                 </div>
-                <div class="slide fade">
-                    <img src="pictures/economy2.jpg" alt="Image 2" width="50%" height="20%">
-                    <div class="text">Supporting entrepreneurship, job-training, and income-generating initiatives</div>
+                    
+                <div class="arrow-container">
+                    <a href="#areas"><span class="arrow">&#8595; </span></a>
+                    <a href="#areas"><span class="arrow">&#8595; </span></a>
                 </div>
-                <div class="slide fade">
-                    <img src="pictures/adv1..jpg" alt="Image 3" width="50%" height="20%">
-                    <div class="text">Raising awareness about the rights and needs of our target groups</div>
+            
                 </div>
+        </div>
+        <div id="areas">
+            <h2>Our areas of focus</h2>
+            <div class="focus"> 
+                <figure>
+                    <img src="images/edu.jpg" alt="ducation icon" class="area">
+                    <figcaption> Education</figcaption>
+
+                </figure>
+                <figure>
+                    <img src="images/medi.jpg" alt="Health icon" class="area">
+                    <figcaption> Health</figcaption>
+                </figure> 
+                <figure>
+                    <img src="images/advoc.jpg" alt="ducation icon" class="area">
+                    <figcaption> Advocacy</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/econ.jpg" alt="ducation icon" class="area">
+                    <figcaption> Economic empowerment</figcaption>
+                </figure>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </section>
-        <section class="subheader">
-        <h2> Our areas of focus:</h2>
-        <p>"We believe that every individual deserves a chance to thrive, regardless of their age, gender, or background. Join us on this journey to inspire positive change and create a brighter future for all."</p>
-        </section>
-        <section class="events">
-           
-            <div class="event-card" onclick="window.location='#';">
-                <img src="pictures/edu-main.jpg" alt="Health project in Jinja">
-                <h3>Education</h3>
+            
+        </div>
+        <div class="info" id="story">
+            <div class="text">
+                <h1>Our story</h1>
+                <p>Growing up, I was deeply moved by the struggles and injustices faced by marginalized communities. I saw how lack of access to education, healthcare, and economic opportunities trapped individuals in cycles of poverty and despair. I knew I had to do something to make a difference.
+
+                    My passion for this cause was ignited during my volunteer work at a local community centre, where I witnessed first-hand the impact of dedicated support and resources on people's lives. I saw children blossom into confident learners, women gain economic independence, and elderly individuals find dignity and purpose.
+                    
+                    Anavah Foundation is born out of this passion and commitment.
+                </p>
             </div>
-            <div class="event-card" onclick="window.location='#';">
-                <img src="pictures/medical.jpg" alt="Educational programs">
-                <h3>Health care</h3>
+            <div class="text">
+                <h2>Our mission</h2>
+                <p>To provide education, healthcare, and economic empowerment to those who need it most.
+                     We aim to create a supportive community that fosters growth, hope, and resilience.
+                </p>
             </div>
-            <div class="event-card" onclick="window.location='#';">
-                <img src="pictures/economic-.jpg" alt="Health project in Jinja">
-                <h3>Economic Empowerment</h3>
+            <div class="text">
+                <h2>Our purpose</h2>
+                <p>Empowering marginalized communities, especially children, girls, vulnerable women, 
+                    and the elderly, to break the cycle of poverty and injustice, by providing access
+                     to education, healthcare, economic opportunities, and advocacy, through
+                     sustainable programs and partnerships, to create a brighter future for all.
+                </p>
             </div>
-            <div class="event-card" onclick="window.location='#';">
-                <img src="pictures/rd-adv.jpg" alt="Educational programs">
-                <h3>Advocacy</h3>
+            <div class="text">
+                <h2>Short-term goals (1-3 years):</h2>
+                <p>•We will provide quality education and healthcare to at least 500 vulnerable children through child sponsorship programs.
+
+                    •Anavah Foundation will empower 1,000 girls and women through advocacy, capacity building, and livelihood initiatives.
+                    
+                    •Anavah Foundation will improve the health and well-being of 2,000 elderly individuals through targeted healthcare programs and provision of basic needs.
+                    
+                    •Anavah Foundation will establish partnerships with local organizations and communities to amplify impact.
+                    
+                    •We will build a strong and sustainable organizational structure to support program growth.
+                </p>
             </div>
-        </section>
-      
-        <footer>
-            <p>&copy; <span id="current-year"></span> anavah foundation</p>
-        </footer>
+            <div class="text">
+                <h2>Medium-term goals (4-6 years):</h2>
+                <p>• We will expand child sponsorship programs to reach 2,000 vulnerable children.
+
+                    • Establish 5 community centers for girls and women to access empowerment programs.
+                    
+                    • Anavah Foundation launch livelihood initiatives for 500 vulnerable women and elderly individuals.
+                    
+                    • We will advocate for policy changes to benefit marginalized communities.
+                    
+                    • We shall strengthen community resilience and self-reliance through sustainable development initiatives.
+                </p>
+            </div>
+            <div  class="text">
+                <h2>• Long-term goals (7- 10 years):</h2>
+                <p>
+                    •Anavah Foundation create a model for sustainable development and empowerment that can be replicated in other communities.
+                    
+                    •We shall improve the quality of life and well-being of at least 10,000 vulnerable children, girls, women, and elderly individuals.
+                    
+                    •We will contribute to significant policy changes and social justice for marginalized communities.
+                    
+                    • Anavah Foundation will build a strong and sustainable organizational structure to support long-term impact.
+                </p>
+            </div>
+            <div class="text">
+                <h2>Our Values:</h2>
+                <p>
+                    1. Empowerment: Empowering marginalized communities to take control of their lives and make informed decisions.
+                    
+                    2. Compassion: Showing kindness, empathy, and understanding towards those in need.
+                    
+                    3. Inclusivity: Promoting equal opportunities and access for all, regardless of age, gender, race, or ability.
+                    
+                    4. Integrity: Operating with transparency, accountability, and ethical standards.
+                    
+                    5. Cultural Sensitivity: Respecting and honouring diverse cultural backgrounds and traditions.
+                    
+                    
+                </p>
+            </div>
+            <div class="text">
+                <h2>Anavah Foundation Target Audience and services offered</h2>
+                <p>
+                    
+Target Audience
+Children (5-10 years):
+Orphans and vulnerable children
+Children with disabilities
+Children from low-income families
+Girls (10-18 years):
+Adolescent girls from disadvantaged backgrounds
+Girls at risk of early marriage and pregnancy
+Girls with limited access to education and healthcare
+Vulnerable Women (18-65 years):
+Survivors of gender-based violence
+Women with disabilities
+Women from low-income households
+(65+ years):
+Seniors living alone or in poverty
+Elderly with chronic health conditions
+Elderly with limited access to social services
+Services:
+Children:
+Education and skills training
+Healthcare and nutrition support
+Psycho-social support and counseling
+Recreational and cultural activities
+Girls:
+Empowerment and life skills training
+Mentorship and leadership development
+Access to education and healthcare
+Economic empowerment through entrepreneurship
+Vulnerable Women:
+Economic empowerment through microfinance and entrepreneurship
+Healthcare and nutrition support
+Psycho-social support and counselling
+Legal aid and advocacy
+Elderly:
+Social services and support
+Healthcare and nutrition support
+Recreational and cultural activities
+Access to social security and pension benefits
+                    
+                    
+                </p>
+            </div>
+
+        </div>
+    <div id="team">
+        <h1>Meet the team</h1>
+        <div id="members-container" class="grid-view"></div>
+        <div class="ceo">
+            <h2> About our Executive Director and Founder</h2>
+            <p>Amoit Osikol Lydia is a name that resonates with compassion, resilience, and a deep commitment to making a difference in the lives of others. As the Executive Director of Anavah Foundation, Lydia has dedicated her life to supporting the less advantaged, driven by her personal experiences and a genuine desire to extend a helping hand to those in need.
+                Lydia’s journey has been marked by unimaginable challenges, having been orphaned at a tender age and raised in abject poverty. However, through the kindness of her uncle and individuals in her community, she learned the transformative power of generosity and compassion. These experiences have shaped her into the compassionate and empathetic leader she is today.
+                With a Bachelor’s Degree in Development Studies, a Certificate in Monitoring and Evaluation, and currently pursuing a Master’s Degree in the same field, Lydia has equipped herself with the knowledge and skills necessary to drive positive change. Her certifications in Good Clinical Practice, Safeguarding, Sexual Reproductive Health and Rights, and Counselling further demonstrate her commitment to holistic development and well-being.
+                As the head of Anavah Foundation, Lydia leverages her academic background, certifications, and personal experiences to lead the organization with passion and dedication. Her expertise in development studies, research, child development, monitoring and evaluation, and social welfare areas enables her to make informed decisions and implement impactful programs that benefit vulnerable populations.
+                Lydia’s vision for Anavah Foundation is one of inclusivity, empowerment, and sustainability. She envisions a world where everyone has access to opportunities, resources, and support, breaking cycles of poverty and creating a brighter future for generations to come. Through her work, Lydia aims to create a ripple effect of compassion and empathy, inspiring others to join her in making a difference in the world.
+                In conclusion, Amoit Osikol Lydia is a shining example of how personal experiences can drive meaningful change in the world. Her dedication to supporting the less advantaged, coupled with her academic background and certifications, make her a persuasive advocate for social welfare and development. As we look to the future, let us be inspired by Lydia’s story and work together to create a more compassionate and inclusive world for all.
+                </p>
+        </div>
     </div>
+    </main>
+    <footer>
+        <div>
+            <p>Anavah foundation</p>
+            <p>Clive Road west</p>
+            <p>P.O Box 2016 Jinja</p>
+        </div>
+
+        <div>
+            <ul>
+                <li><a href="#"><img src="images/whatsapp-svgrepo-com.svg" alt="whatsapp"></a></li>
+                <li><a href="https://www.instagram.com/anavah2024/"><img src="images/instagram-1-svgrepo-com.svg" alt="instagram icon"></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61565399113022"><img src="images/facebook-color-svgrepo-com.svg" alt="facebook icon"></a></li>
+            </ul>
+            <p>Baraza John</p>
+            <p>&copy; <span id="year"></span></p>
+            <p>anavahfoundation1@gmail.com</p>
+        </div>
+        
+    </footer>
+
 </body>
-</html>
-
-
-
-
+    
