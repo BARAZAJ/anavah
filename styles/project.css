@@ -71,7 +71,7 @@ table{
     height: 80%;
     background-color: var(--primary-color);
     position:fixed;
-    width:50%;
+    width:70%;
     z-index: 1000000;
     
 }
@@ -81,11 +81,12 @@ table{
     height: 80%;
     list-style: none;
     width: 100%;
+
    
 }
 .mobile-nav ul li{
     margin: 5%;
-    padding:3% 10%;
+    width: 90%;
 }
 .mobile-nav ul li a:hover{
     background-color: white;
@@ -102,6 +103,8 @@ table{
     padding-right: 50%;
     padding-top: 5%;
     padding-bottom:5%;
+    text-align: center;
+    width: 90%;
 
 }
 
@@ -536,6 +539,9 @@ background-color: var(--hover-color);
 }
 .focus{
     flex-wrap: wrap;
+}
+.logo h1{
+    font-size: 20px;
 }
 
 
