@@ -16,7 +16,10 @@
 
 body{
    
-    overflow-x: hidden;
+    overflow-x: ;
+    border: none;
+    margin: 0;
+    width: 100%;
 
 }
 header{
