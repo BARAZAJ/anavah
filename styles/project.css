@@ -51,10 +51,11 @@ header h1{
 }
 
 
-header.scrolled {
-    background-color: var(--primary-color); /* Change to desired color */
-    color: white;
+#header.scrolled {
+    background-color: blue; /* Replace with your preferred color */
+    transition: background-color 0.3s;
 }
+
 
 header.scrolled nav ul li a{
     color: white;
@@ -63,15 +64,6 @@ header.scrolled nav ul li a{
 .hamburger{
     display: none;
    
-}
-td, tr{
-    color: white;
-}
-
-
-
-table{
-    display: none;
 }
 
 .mobile-nav{
@@ -396,24 +388,7 @@ figure{
    margin-right:8%;
    text-align: center;
 }
-/*.grid-view {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
 
-.list-view {
-    display:flex;
-    flex-direction: column;
-    gap:10px;
-}
-.list-view .member-card{
-    flex-direction: row;
-}
-.list-view .member-card img{
-    width:20%;
-    height: 10%;
-}*/
 .grid-view{
     display: flex;
     flex-direction: row;
