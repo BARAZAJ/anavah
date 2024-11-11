@@ -452,7 +452,7 @@ figure{
 
 }
 .ceostory img{
-    margin:2%
+    margin:2%;
 }
 
 
@@ -460,6 +460,9 @@ figure{
 @media only screen and (max-width:765px){
     .ceostory{
         flex-direction: column;
+    }
+    .ceostory img{
+        width:80%
     }
 
 
