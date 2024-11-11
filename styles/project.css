@@ -312,7 +312,7 @@ figure{
 
 
 
-/*.api-section{
+.api-section{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -342,7 +342,7 @@ figure{
 
 
 }
-*/
+
 .info{
     display: flex;
     flex-direction: column;
