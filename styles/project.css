@@ -16,6 +16,8 @@
   header, .mobile-nav {
     width: 100%;
     box-sizing: border-box;
+    background-color: rgba(21, 85, 119, 0.785);
+
 }
 
 
@@ -90,6 +92,7 @@ header.scrolled nav ul li a{
 .mobile-nav ul li{
     margin: 5%;
     width: 90%;
+    
 }
 .mobile-nav ul li a:hover{
     background-color: white;
@@ -108,6 +111,10 @@ header.scrolled nav ul li a{
     padding-bottom:5%;
     text-align: center;
     width: 90%;
+    border-radius: 6%;
+    
+
+    
 
 }
 
@@ -179,14 +186,8 @@ main{
     
 }
 
-.main-pic{
-    width: 100%;
-   grid-column: 1 / 2;
-   grid-row: 1 / 2;
-   z-index: -100000;
-   
 
-}
+
 footer{
     display: flex;
     flex-direction: row;
@@ -307,34 +308,11 @@ figure{
     justify-content: center;
 }
 
-/*   
-
-@keyframes slideInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/*.area {
-    opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-.area.visible {
-    opacity: 1;
-    transform: translateX(0);
-    animation: slideInFromRight 1s ease-out forwards;
-}
-*/
 
 
-.api-section{
+
+
+/*.api-section{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -364,7 +342,7 @@ figure{
 
 
 }
-
+*/
 .info{
     display: flex;
     flex-direction: column;
@@ -448,13 +426,26 @@ figure{
 .ceo p, h2{
     text-align: center;
 }
+.hero2{
+    display: none;
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: -100000;
+}
+.hero1{
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: -100000;
+}
+.motto ul li, a{
+    color:white;
+}
 
 
 
 @media only screen and (max-width:765px){
-    body{
-       
-    }
     .main{
         display:flex;
         flex-direction: column;
@@ -462,6 +453,12 @@ figure{
         justify-content: center;
         max-width: 100%;
         
+    }
+    .hero1{
+        display: none;
+    }
+    .hero2{
+        display: block;
     }
 .main-pic{
     height: 100%;
