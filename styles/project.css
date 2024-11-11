@@ -442,8 +442,26 @@ figure{
 .motto ul li, a{
     color:white;
 }
+.ceostory{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(128, 128, 128, 0.772);
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10%;
+
+}
+.ceostory img{
+    margin:2%
+}
+
+
 
 @media only screen and (max-width:765px){
+    .ceostory{
+        flex-direction: column;
+    }
+
 
     .hero2{
         height: 100%;
@@ -504,8 +522,6 @@ padding-top: 10%;
 display: none;
 flex-direction: row;
 }
-
-
 
 .hamburger {
 display: block;
