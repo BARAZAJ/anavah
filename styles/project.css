@@ -366,7 +366,32 @@ figure{
    margin-right:8%;
    text-align: center;
 }
+.mission{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.goals{
+    display: flex;
+    flex-direction: row;
+}
+.target{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.target div{
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: space-evenly;
+    padding: 3%;
 
+}
+.values ul{
+    list-style: none;
+}
 .grid-view{
     display: flex;
     flex-direction: row;
@@ -453,11 +478,18 @@ figure{
 }
 .ceostory img{
     margin:2%;
+    width:30%;
+}
+.ceostory p{
+    font-size: 120%;
 }
 
 
 
 @media only screen and (max-width:765px){
+    .mission, .target, .goals{
+        flex-direction: column;
+    }
     .ceostory{
         flex-direction: column;
     }
